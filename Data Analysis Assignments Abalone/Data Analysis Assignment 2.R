@@ -10,10 +10,9 @@ skewness(RATIO, na.rm = TRUE, unbiased = TRUE)
 kurtosis(RATIO, na.rm = TRUE, unbiased = TRUE)
 # Checking for normal distribution of RATIO
 normality <- shapiro.test(RATIO)
-# Shapiro-Wilks Test is used to check for normality. If P-Value is >0.05 then the
-distribution is normal
+# Shapiro-Wilks Test is used to check for normality. If P-Value is >0.05 then the distribution is normal
 ifelse(normality$p.value > 0.05,"Normal","Not Normal")
-> Not Normal
+
 #1b
 L_RATIO=log10(RATIO)
 hist(L_RATIO)
